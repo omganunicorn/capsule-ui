@@ -1,0 +1,29 @@
+.app-header {
+  background-color: #00d1b2;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.app-content {
+  padding: 0 30px;
+}
+
+.box {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+pre {
+  background-color: whitesmoke;
+  color: #4a4a4a;
+  font-size: 0.875em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  white-space: pre;
+  word-wrap: normal;
+  -webkit-font-smoothing: auto;
+  font-family: 'Consolas', monospace;
+}

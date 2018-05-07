@@ -1,0 +1,37 @@
+{
+  "name": "capsule-ui",
+  "version": "0.0.1",
+  "description": "A React UI framework inspired on Bulma and based on Styled Components.",
+  "main": "index.js",
+  "repository": "https://github.com/omganunicorn/capsule-ui",
+  "author": "omganunicorn",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "polished": "^1.9.2",
+    "style-loader": "^0.21.0",
+    "styled-components": "^3.2.6",
+    "webpack": "^4.7.0",
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "css",
+    "react",
+    "ui",
+    "styled-components"
+  ]
+}
