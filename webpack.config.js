@@ -1,39 +1,57 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const webpack = require('webpack');
 
-const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
-});
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
-module.exports = {
+const config = {
+  entry: {
+    capsule: ['./src/index.js'],
+    'capsule.min': ['./src/index.js'],
+  },
+  output: {
+    path: path.resolve(__dirname, 'bundles'),
+    filename: '[name].js',
+    libraryTarget: 'umd',
+    library: 'Capsule',
+    umdNamedDefine: true,
+  },
+  mode: "production",
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+  devtool: 'none',
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
-              sourceMap: true,
-              minimize: true
-            }
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
           }
-        ]
+        }
       }
     ]
   },
-  plugins: [htmlWebpackPlugin]
+  plugins: [
+    new MinifyPlugin()
+  ],
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react',
+      umd: 'react',
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs2: 'react-dom',
+      commonjs: 'react-dom',
+      amd: 'react-dom',
+      umd: 'react-dom',
+    },
+  },
 };
+
+module.exports = config;

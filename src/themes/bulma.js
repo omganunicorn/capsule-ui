@@ -62,6 +62,43 @@ const theme = {
       }`
     },
   },
+  layout: {
+    container(props) {
+      return `margin: 0 auto;
+      position: relative;
+      @media screen and (min-width: 1088px) {        
+        max-width: 960px;
+        width: 960px;
+        &.is-fluid {
+          margin-left: 64px;
+          margin-right: 64px;
+          max-width: none;
+          width: auto;
+        }
+      }
+      @media screen and (max-width: 1279px) {
+        &.is-widescreen {
+          max-width: 1152px;
+          width: auto;
+        }
+      }
+      @media screen and (max-width: 1471px) {
+        &.is-fullhd {
+          max-width: 1344px;
+          width: auto;
+        }
+      }
+      @media screen and (min-width: 1280px) {
+        max-width: 1152px;
+        width: 1152px;
+      }
+      @media screen and (min-width: 1472px) {
+        max-width: 1344px;
+        width: 1344px;
+      }
+      `
+    },
+  },
 };
 
 export default theme;
