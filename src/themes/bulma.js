@@ -41,7 +41,7 @@ const theme = {
       margin: 0;
       padding: 0;
     }
-    
+
     h1,
     h2,
     h3,
@@ -51,48 +51,48 @@ const theme = {
       font-size: 100%;
       font-weight: normal;
     }
-    
+
     ul {
       list-style: none;
     }
-    
+
     button,
     input,
     select,
     textarea {
       margin: 0;
     }
-    
+
     html {
       box-sizing: border-box;
     }
-    
+
     *, *::before, *::after {
       box-sizing: inherit;
     }
-    
+
     img,
     audio,
     video {
       height: auto;
       max-width: 100%;
     }
-    
+
     iframe {
       border: 0;
     }
-    
+
     table {
       border-collapse: collapse;
       border-spacing: 0;
     }
-    
+
     td,
     th {
       padding: 0;
       text-align: left;
     }
-    
+
     html {
       background-color: white;
       font-size: 16px;
@@ -107,7 +107,7 @@ const theme = {
           -ms-text-size-adjust: 100%;
               text-size-adjust: 100%;
     }
-    
+
     article,
     aside,
     figure,
@@ -117,7 +117,7 @@ const theme = {
     section {
       display: block;
     }
-    
+
     body,
     button,
     input,
@@ -125,35 +125,35 @@ const theme = {
     textarea {
       font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     }
-    
+
     code,
     pre {
       -moz-osx-font-smoothing: auto;
       -webkit-font-smoothing: auto;
       font-family: monospace;
     }
-    
+
     body {
       color: #4a4a4a;
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.5;
     }
-    
+
     a {
       color: #3273dc;
       cursor: pointer;
       text-decoration: none;
     }
-    
+
     a strong {
       color: currentColor;
     }
-    
+
     a:hover {
       color: #363636;
     }
-    
+
     code {
       background-color: whitesmoke;
       color: #ff3860;
@@ -161,7 +161,7 @@ const theme = {
       font-weight: normal;
       padding: 0.25em 0.5em 0.25em;
     }
-    
+
     hr {
       background-color: whitesmoke;
       border: none;
@@ -169,31 +169,31 @@ const theme = {
       height: 2px;
       margin: 1.5rem 0;
     }
-    
+
     img {
       height: auto;
       max-width: 100%;
     }
-    
+
     input[type="checkbox"],
     input[type="radio"] {
       vertical-align: baseline;
     }
-    
+
     small {
       font-size: 0.875em;
     }
-    
+
     span {
       font-style: inherit;
       font-weight: inherit;
     }
-    
+
     strong {
       color: #363636;
       font-weight: 700;
     }
-    
+
     pre {
       -webkit-overflow-scrolling: touch;
       background-color: whitesmoke;
@@ -204,20 +204,20 @@ const theme = {
       white-space: pre;
       word-wrap: normal;
     }
-    
+
     pre code {
       background-color: transparent;
       color: currentColor;
       font-size: 1em;
       padding: 0;
     }
-    
+
     table td,
     table th {
       text-align: left;
       vertical-align: top;
     }
-    
+
     table th {
       color: #363636;
     }
@@ -280,7 +280,7 @@ const theme = {
       return `
       margin: 0 auto;
       position: relative;
-      @media screen and (min-width: 1088px) {        
+      @media screen and (min-width: 1088px) {
         max-width: 960px;
         width: 960px;
         &.is-fluid {

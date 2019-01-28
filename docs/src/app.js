@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 
 import { Button, Container } from './../../src';
@@ -57,7 +56,7 @@ class App extends Component {
               <Button isColor="warning">Warning</Button>
             </p>
           </Container>
-            
+
           <Container>
             <h3>Link</h3>
             <pre>
@@ -130,7 +129,7 @@ class App extends Component {
               <Button isSmall isLoading>Loading</Button>
             </p>
           </Container>
-          
+
         </div>
       </ThemeProvider>
     );
